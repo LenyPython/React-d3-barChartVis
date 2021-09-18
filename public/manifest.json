@@ -1,0 +1,7 @@
+{
+  "manifest_version": 2,
+  "short_name": "Bar charts",
+  "name": "Bar chart visualize with d3",
+  "start_url": ".",
+  "display": "standalone"
+}
