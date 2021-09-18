@@ -1,0 +1,2 @@
+(this.webpackJsonpbarcharts=this.webpackJsonpbarcharts||[]).push([[0],{9:function(t,e,r){"use strict";r.r(e);var c=r(1),s=r.n(c),n=r(3),a=r.n(n),i=r(0);var o=function(){return Object(i.jsx)("div",{className:"App"})};a.a.render(Object(i.jsx)(s.a.StrictMode,{children:Object(i.jsx)(o,{})}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.90ff88d6.chunk.js.map

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/LenyPython/React-d3-barChartVis/static/js/main.90ff88d6.chunk.js",
+    "main.js.map": "/LenyPython/React-d3-barChartVis/static/js/main.90ff88d6.chunk.js.map",
+    "runtime-main.js": "/LenyPython/React-d3-barChartVis/static/js/runtime-main.1769b248.js",
+    "runtime-main.js.map": "/LenyPython/React-d3-barChartVis/static/js/runtime-main.1769b248.js.map",
+    "static/js/2.79c06220.chunk.js": "/LenyPython/React-d3-barChartVis/static/js/2.79c06220.chunk.js",
+    "static/js/2.79c06220.chunk.js.map": "/LenyPython/React-d3-barChartVis/static/js/2.79c06220.chunk.js.map",
+    "index.html": "/LenyPython/React-d3-barChartVis/index.html",
+    "static/js/2.79c06220.chunk.js.LICENSE.txt": "/LenyPython/React-d3-barChartVis/static/js/2.79c06220.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1769b248.js",
+    "static/js/2.79c06220.chunk.js",
+    "static/js/main.90ff88d6.chunk.js"
+  ]
+}
