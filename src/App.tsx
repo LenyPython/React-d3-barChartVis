@@ -1,8 +1,10 @@
 import { useRef, useEffect, useState} from 'react'
+import * as d3 from 'd3'
 
 function App() {
   const [data, setData] = useState<number[]>([])
-  const md: {current?:JSX.Element[]} = useRef()
+  const md = useRef()
+  const svgRef = useRef()
   const generateArray = (): number[] => new Array(20).fill(1).map((item, idx)=>Math.floor(Math.random()*idx+item))
 
   useEffect(():void => {
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <svg ref={svgRef}></svg>
       <button onClick={handleClick}>Generate new array</button>
       {md.current}
     </div>
