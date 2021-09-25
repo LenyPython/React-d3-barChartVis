@@ -38,7 +38,7 @@ interface marginInterface {left:number,
       .attr('fill', 'navy')
     }
 
-    useEffect(():void => drawBarChart())
+    useEffect(():void => drawBarChart(), [data])
 
   return <>
       <svg ref={svgRef}></svg>
