@@ -10,7 +10,7 @@ interface marginInterface {left:number,
     bottom:number
     }
 
-export const Barchart: React.FC<PropsInterface> = ({data}) => {
+export const Barchartv: React.FC<PropsInterface> = ({data}) => {
 const svgRef = useRef(null)
 
   const margin: marginInterface = {left:50,
@@ -22,7 +22,7 @@ const svgRef = useRef(null)
     const svgHeight = 500
     const svgWidth = 800
 
-    const drawBarChart = ():void => {
+  useEffect(():void =>{
       const SVG = d3.select(svgRef.current)
       SVG.attr('width', svgWidth)
       .attr('height', svgHeight)
@@ -61,9 +61,8 @@ const svgRef = useRef(null)
       SVG.append('g')
         .attr('transform', `translate(0,${svgHeight - margin.bottom})`)
         .call(xAxis)
-    }
 
-    useEffect(():void => drawBarChart() , [data])
+    }, [data])
 
   return <svg ref={svgRef}></svg>
 }

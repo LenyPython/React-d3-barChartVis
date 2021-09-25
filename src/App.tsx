@@ -1,7 +1,11 @@
 import { useEffect, useState} from 'react'
 import {Link, Route, Switch} from 'react-router-dom'
-import {BARCHART} from './constants/constants'
-import { Barchart } from './components/Barchart/Barchart'
+import {
+  BARCHARTV,
+  BARCHARTH
+} from './constants/constants'
+import { Barchartv } from './components/Barchart/Barchartv'
+import { Barcharth } from './components/Barchart/Barcharth'
 
 function App() {
   const [data, setData] = useState<number[]>([])
@@ -21,9 +25,11 @@ function App() {
       <br />
         <ul>
           <li>
-          <Link to={BARCHART}> Barchart horizontal </Link>
+          <Link to={BARCHARTV}> Barchart vertical </Link>
           </li>
-          <li></li>
+          <li>
+          <Link to={BARCHARTH}> Barchart horizontal </Link>
+          </li>
           <li></li>
           <li></li>
           <li></li>
@@ -36,8 +42,11 @@ function App() {
       <Route path='/home' exact>
         <h2>Choosa a data representation</h2>
       </Route>
-      <Route path={BARCHART} >
-      <Barchart data={data} />
+      <Route path={BARCHARTH} >
+      <Barcharth data={data} />
+      </Route>
+      <Route path={BARCHARTV} >
+      <Barchartv data={data} />
       </Route>
       </Switch>
     </div>
