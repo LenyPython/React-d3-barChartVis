@@ -15,10 +15,20 @@ function App() {
 
   return (
     <div className="App">
+      <nav>
       <button onClick={handleClick}>Generate new array</button>
       {data}
       <br />
-      <Link to={BARCHART}> Barchart horizontal </Link>
+        <ul>
+          <li>
+          <Link to={BARCHART}> Barchart horizontal </Link>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
       <Switch>
       <Route path='/' exact>
         <h2>Choosa a data representation</h2>

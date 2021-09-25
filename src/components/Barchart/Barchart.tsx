@@ -28,6 +28,8 @@ interface marginInterface {left:number,
       .attr('height', svgHeight)
 
       SVG.selectAll('rect')
+      .remove()
+      SVG.selectAll('rect')
       .data(data)
       .enter()
       .append('rect')
