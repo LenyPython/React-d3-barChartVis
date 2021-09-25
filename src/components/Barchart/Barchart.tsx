@@ -29,18 +29,25 @@ interface marginInterface {left:number,
 
       SVG.selectAll('rect')
       .remove()
+      const xScale = d3.scaleLinear()
+        .domain([0,data.length])
+        .range([margin.left, svgWidth - margin.right])
+      const yScale = d3.scaleLinear()
+        .domain([0,Math.max(...data) + 2])
+        .range([svgHeight - margin.bottom, margin.top])
+
       SVG.selectAll('rect')
       .data(data)
       .enter()
       .append('rect')
-      .attr('x', (d: number, i: number) =>margin.left + i*5)
-      .attr('y', (d: number) =>svgHeight - d)
-      .attr('width', (d: number) => 4)
-      .attr('height', (d: number) => d)
+      .attr('x', (d: number, i: number) => xScale(i))
+      .attr('y', (d: number) => yScale(d))
+      .attr('width', (d: number) => svgWidth / data.length - 10)
+      .attr('height', (d: number) => svgHeight - margin.bottom - yScale(d))
       .attr('fill', 'navy')
     }
 
-    useEffect(():void => drawBarChart(), [data])
+    useEffect(():void => drawBarChart() , [data])
 
   return <>
       <svg ref={svgRef}></svg>
