@@ -1,26 +1,16 @@
 import * as d3 from 'd3'
 import {useRef, useEffect} from 'react'
+import { MARGIN as margin } from '../../constants/constants'
 
 interface PropsInterface {
   data: number[]
 }
-interface marginInterface {left:number,
-    right: number,
-    top:number,
-    bottom:number
-    }
 
 export const Barcharth: React.FC<PropsInterface> = ({data}) => {
 const svgRef = useRef(null)
 
-  const margin: marginInterface = {left:50,
-    right: 50,
-    top: 50,
-    bottom:50
-    }
-
-    const svgHeight = 500
-    const svgWidth = 800
+const svgHeight = 500
+const svgWidth = 800
 
 useEffect(():void =>{
       const SVG = d3.select(svgRef.current)
